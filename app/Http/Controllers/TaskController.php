@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller{
+    public function __construct(){
+        //security check apakah user sudah login aap belum
+        //jika belum akan di drag ke login page
+        $this->middleware('auth');
+    }
     function index(){
         $task = DB::select("select * from to_do");
         $data =[ 

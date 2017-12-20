@@ -24,3 +24,11 @@ Route::post('/task/add', "TaskController@add");
 Route::get('/task/edit/{task_edit}', "TaskController@edit");
 Route::post('/task/edit/{task_edit}', "TaskController@edit");
 Route::post('/task/delete', "TaskController@delete");
+
+
+Route::get('/page_view', "PageViewController@index");
+Route::get('/page_view_reset', "PageViewController@reset");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

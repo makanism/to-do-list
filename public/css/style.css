@@ -1,0 +1,12 @@
+.purwadhika{
+    background-color: red;
+}
+
+.purwadhika .navbar-nav> li > a{
+    color: white;
+}
+
+.purwadhika .navbar-brand{
+    color: white;
+    font-weight: 800;
+}

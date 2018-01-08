@@ -32,3 +32,5 @@ Route::get('/page_view_reset', "PageViewController@reset");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/api/tasks', 'ApiController@getTasks');

@@ -12,6 +12,14 @@
                 <div class="form-group">
                     <label for="name">Task</label>
                     <input type="text" class="form-control" id="task_name" name="task_name" placeholder="Task">
+                
+                {{--ERROR--}}
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <p>{{ $errors->first('task_name') }}</p>
+                    </div>
+                @endif
+                
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-small">Submit</button>

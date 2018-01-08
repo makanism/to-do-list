@@ -39,6 +39,11 @@ class TaskController extends Controller{
             'success'=>false
         ];
         if ($request->isMethod('post')){
+            //validasi
+            $request->validate([
+                'task_name'=>'required|alpha', 
+                //alpha hrs aphabet, numeric harus angka
+            ]);
             $taskName = $request->input('task_name');
             $returnValue = DB::insert('insert into to_do(Name) values(?)',
             [$taskName]);
